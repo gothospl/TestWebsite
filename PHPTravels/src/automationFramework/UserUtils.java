@@ -6,9 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class LogInTest {
+public class UserUtils {
 	
-	private LogInTest() {
+	private UserUtils() {
 		throw new IllegalStateException("Utility Class");
 	}
 	
@@ -36,8 +36,8 @@ public class LogInTest {
 		WebElement passwordBox = driver.findElement(By.cssSelector("div.wow:nth-child(3) > div:nth-child(2) > label:nth-child(1) > input:nth-child(1)"));
 		WebElement loginButton = driver.findElement(By.cssSelector("button.btn:nth-child(4)"));
 		
-		usernameBox.sendKeys("username");
-		passwordBox.sendKeys("password");
+		usernameBox.sendKeys(username);
+		passwordBox.sendKeys(password);
 		loginButton.click();
 		
 	}

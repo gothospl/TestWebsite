@@ -7,7 +7,7 @@
   	<parameter name="address"			value="https://www.phptravels.com/demo/"/>
   	<parameter name="expectedMessage"	value="Hi, Demo User"/>
   	<classes>
-  		<class name="automationFramework.main";/>
+  		<class name="automationFramework.PHPTravelsMain"/>
   	</classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

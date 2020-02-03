@@ -17,6 +17,7 @@ public class PHPTravelsMain {
 	
 	@BeforeSuite
 	public void beforeSuite() throws InterruptedException {
+	System.setProperty("webdriver.gecko.driver", "//home//bartek//Downloads//geckodriver-v0.26.0-linux64//geckodriver");
 	options.setCapability("marionette", true);
 	options.addPreference("browser.link.open_newwindow", 1);
 	
@@ -28,7 +29,7 @@ public class PHPTravelsMain {
 	public void Login(String username, String password, String address, String expectedMessage) throws InterruptedException {
 		
 		WebDriver driver = new FirefoxDriver(options);			
-		LogInTest.test(driver, username, password, address, expectedMessage);
+		UserUtils.test(driver, username, password, address, expectedMessage);
 		String bodyText = driver.findElement(By.tagName("body")).getText();
 		sa.assertTrue(bodyText.contains(expectedMessage), "Login successful!");
 		
