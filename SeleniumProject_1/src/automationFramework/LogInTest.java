@@ -22,6 +22,8 @@ public class LogInTest {
 
 		WebElement myAccountButton = driver.findElement(By.cssSelector(".dropdown-login > a:nth-child(1)"));
 		myAccountButton.click();
+		
+		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a.tr:nth-child(1)")));
 		WebElement goToLoginButton = driver.findElement(By.cssSelector("a.tr:nth-child(1)"));
 		goToLoginButton.click();
 		
