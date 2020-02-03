@@ -29,8 +29,8 @@ public class LogInTest {
 		
 		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("div.form-group:nth-child(1) > label:nth-child(1) > span:nth-child(2)")));
 		
-		WebElement usernameBox = driver.findElement(By.cssSelector("div.form-group:nth-child(1) > label:nth-child(1) > span:nth-child(2)"));
-		WebElement passwordBox = driver.findElement(By.cssSelector("div.wow:nth-child(3) > div:nth-child(2) > label:nth-child(1) > span:nth-child(2)"));
+		WebElement usernameBox = driver.findElement(By.cssSelector("div.form-group:nth-child(1) > label:nth-child(1) > input:nth-child(1)"));
+		WebElement passwordBox = driver.findElement(By.cssSelector("div.wow:nth-child(3) > div:nth-child(2) > label:nth-child(1) > input:nth-child(1)"));
 		WebElement loginButton = driver.findElement(By.cssSelector("button.btn:nth-child(4)"));
 		
 		usernameBox.sendKeys("user@phptravels.com");
