@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Login">
+  	<parameter name="username"			value="user@phptravels.com"/>
+  	<parameter name="password"			value="demouser"/>
+  	<parameter name="address"			value="https://www.phptravels.com/demo/"/>
+  	<parameter name="expectedMessage"	value="Hi, Demo User"/>
+  	<classes>
+  		<class name="automationFramework.main";/>
+  	</classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -12,9 +12,12 @@ public class LogInTest {
 		throw new IllegalStateException("Utility Class");
 	}
 	
-	static void test(WebDriver driver) throws InterruptedException {
+	static void test(WebDriver driver, String username, String password, String address, String expectedMessage) throws InterruptedException {
 		
 		WebDriverWait wait = new WebDriverWait(driver, 60);
+		
+		driver.navigate().to("https://phptravels.com/demo/");
+		
 		WebElement frontEndHomepage = driver.findElement(By.cssSelector("div.fadeInUp:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > a:nth-child(1)"));
 		frontEndHomepage.click();
 		
@@ -33,8 +36,8 @@ public class LogInTest {
 		WebElement passwordBox = driver.findElement(By.cssSelector("div.wow:nth-child(3) > div:nth-child(2) > label:nth-child(1) > input:nth-child(1)"));
 		WebElement loginButton = driver.findElement(By.cssSelector("button.btn:nth-child(4)"));
 		
-		usernameBox.sendKeys("user@phptravels.com");
-		passwordBox.sendKeys("demouser");
+		usernameBox.sendKeys("username");
+		passwordBox.sendKeys("password");
 		loginButton.click();
 		
 	}
