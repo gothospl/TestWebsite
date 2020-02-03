@@ -1,15 +1,17 @@
 package automationFramework;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class FirstTestCase {
 
-	public static void main(String[] args) {
-		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-		capabilities.setCapability("marionette", true);
-		System.setProperty("webdriver.gecko.driver", "C:\\Users\\dziub\\Downloads\\geckodriver-v0.26.0-win64\\geckodriver.exe");
-		WebDriver driver = new FirefoxDriver();
+	public static void main(String[] args) throws InterruptedException {
+		
+		FirefoxOptions options = new FirefoxOptions();
+		options.setCapability("marionette", true);
+		options.addPreference("browser.link.open_newwindow", 1);
+		System.setProperty("webdriver.gecko.driver", "//home/bartek/Downloads//geckodriver-v0.26.0-linux64//geckodriver");
+		WebDriver driver = new FirefoxDriver(options);
 		
 		driver.navigate().to("https://phptravels.com/demo/");
 		
