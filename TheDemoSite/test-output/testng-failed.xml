@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="CreateUser(failed)">
+    <parameter name="password" value="1pw1"/>
+    <parameter name="addressLogin" value="https://thedemosite.co.uk"/>
+    <parameter name="username" value="1un1"/>
+    <classes>
+      <class name="org.gothos.tds.MainTest">
+        <methods>
+          <include name="CreateUser"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- org.gothos.tds.MainTest -->
+    </classes>
+  </test> <!-- CreateUser(failed) -->
+  <test thread-count="5" name="LoginUser(failed)">
+    <parameter name="password" value="2pw2"/>
+    <parameter name="addressStart" value="https://thedemosite.co.uk"/>
+    <parameter name="expMsg" value="**Successful Login**"/>
+    <parameter name="username" value="2un2"/>
+    <classes>
+      <class name="org.gothos.tds.MainTest">
+        <methods>
+          <include name="CreateUser"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- org.gothos.tds.MainTest -->
+    </classes>
+  </test> <!-- LoginUser(failed) -->
+</suite> <!-- Failed suite [Suite] -->
