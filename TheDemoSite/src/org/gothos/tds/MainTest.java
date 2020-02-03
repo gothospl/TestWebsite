@@ -31,7 +31,7 @@ public class MainTest {
   public void beforeSuite(String geckoPath) {
 	  options.setCapability("marionette", true);
 	  options.addPreference("browser.link.open_newwindow", 1);
-	  System.setProperty("webdriver.gecko.driver", "//home//bartek//Downloads//geckodriver-v0.26.0-linux64//geckodriver");
+	  System.setProperty("webdriver.gecko.driver", geckoPath);
 	  
   }
 

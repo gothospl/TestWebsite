@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <parameter name="geckoPath"		value="INSERT PATH FOR WINDOWS"/>
+  <parameter name="geckoPath"		value="C:\\Users\\dziub\\Downloads\\geckodriver-v0.26.0-win64\\geckodriver.exe"/>
   <parameter name="address" 		value="https://thedemosite.co.uk"	/>
   <parameter name="expMsg" 		value="**Successful Login**"		/>
   <test name="CreateUser">
