@@ -15,19 +15,19 @@ public class MainTest {
 	public static final FirefoxOptions options = new FirefoxOptions(); 
 	public static final SoftAssert sa = new SoftAssert();
   
-  @Parameters ({ "username", "password", "address", "expMsg"})
+  @Parameters ({ "username", "password", "address", "expMsg" })
   @Test
   public void CreateUser(String username, String password, String address, String expMsg) {
 	  
 	  WebDriver driver = new FirefoxDriver(options);
 	  UserUtils.addUser(driver, username, password, address);
+	  UserUtils.loginUser(driver, username, password);
 	  String bodyText = driver.findElement(By.tagName("body")).getText();
 	  sa.assertTrue(bodyText.contains(expMsg), "Login successful!");
 	  sa.assertAll();
+	  
   }
-  
-
-  
+  	  
   @BeforeSuite
   public void beforeSuite() {
 	  options.setCapability("marionette", true);
