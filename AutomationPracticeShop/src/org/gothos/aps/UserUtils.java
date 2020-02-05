@@ -27,15 +27,34 @@ public class UserUtils {
 		emailCreateField.sendKeys(username);
 		createAnAccountButton.click();
 		
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/table/tbody/tr/td[1]/form/div/center/table/tbody/tr/td[1]/div/center/table/tbody/tr[1]/td[2]/p/input")));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#customer_firstname")));
 		
-		WebElement addUserName = driver.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/form/div/center/table/tbody/tr/td[1]/div/center/table/tbody/tr[1]/td[2]/p/input"));
-		WebElement addPassword = driver.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/form/div/center/table/tbody/tr/td[1]/div/center/table/tbody/tr[2]/td[2]/p/input"));
-		WebElement saveButton = driver.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/form/div/center/table/tbody/tr/td[1]/div/center/table/tbody/tr[3]/td[2]/p/input"));
+		WebElement userTitleMr = driver.findElement(By.cssSelector("#id_gender1"));
+		WebElement userTitleMrs = driver.findElement(By.cssSelector("#id_gender2"));
+		WebElement customerFirstNameField = driver.findElement(By.cssSelector("#customer_firstname"));
+		WebElement customerLastNameField = driver.findElement(By.cssSelector("customer_lastname"));
+		WebElement customerEmailAddressField = driver.findElement(By.cssSelector("#email"));
+		WebElement customerPasswordField = driver.findElement(By.cssSelector("#passwd"));
+		WebElement customerDOB_DayMenu = driver.findElement(By.cssSelector("#days"));
+		WebElement customerDOB_MonthMenu = driver.findElement(By.cssSelector("#months"));
+		WebElement customerDOB_YearMenu = driver.findElement(By.cssSelector("#years"));
+		WebElement newsletterCheckbox = driver.findElement(By.cssSelector("#newsletter"));
+		WebElement optInCheckbox = driver.findElement(By.cssSelector("#optin"));
 		
-		addUserName.sendKeys(username);
-		addPassword.sendKeys(password);
-		saveButton.click();
+		WebElement addressFirstNameField = driver.findElement(By.cssSelector("#firstname"));
+		WebElement addressLastNameField = driver.findElement(By.cssSelector("#lastname"));
+		WebElement addressCompanyField = driver.findElement(By.cssSelector("#company"));
+		WebElement addressAddress1Field = driver.findElement(By.cssSelector("#address1"));
+		WebElement addressAddress2Field = driver.findElement(By.cssSelector("#address2"));
+		WebElement addressCityField = driver.findElement(By.cssSelector("#city"));
+		WebElement addressStateMenu = driver.findElement(By.cssSelector("#id_state"));
+		WebElement addressZipCodeField = driver.findElement(By.cssSelector("#postcode"));
+		WebElement addressCountryMenu = driver.findElement(By.cssSelector("#id_country"));
+		WebElement addressAdditionalField = driver.findElement(By.cssSelector("#other"));
+		WebElement addressHomePhoneField = driver.findElement(By.cssSelector("#phone"));
+		WebElement addressMobilePhoneField = driver.findElement(By.cssSelector("#phone_mobile"));
+		WebElement addressAliasField = driver.findElement(By.cssSelector("#alias"));
+		WebElement registerButton = driver.findElement(By.cssSelector("#submitAccount"));
 		
 	}
 
