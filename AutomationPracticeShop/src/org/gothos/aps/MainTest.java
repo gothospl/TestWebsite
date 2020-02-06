@@ -25,6 +25,13 @@ public class MainTest {
 	  
   }
   
+  @Parameters ({ "gender" })
+  @Test
+  public void GoddamnRadios(String gender) {
+	  WebDriver driver = new FirefoxDriver(options);
+	  GoddamnRadios.go(driver, gender);
+  }
+  
   @Parameters ({ "geckoPath" })
   @BeforeSuite
   public void beforeSuite(String geckoPath) {

@@ -1,6 +1,7 @@
 package org.gothos.aps;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -28,10 +29,10 @@ public class UserUtils {
 		emailCreateField.sendKeys(useremail);
 		createAnAccountButton.click();
 		
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#customer_firstname")));
+		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#id_gender1")));
 		
-		WebElement userTitleMr = driver.findElement(By.cssSelector("#id_gender1"));
-		WebElement userTitleMrs = driver.findElement(By.cssSelector("#id_gender2"));
+		WebElement userTitleMr = driver.findElement(By.cssSelector("div.radio-inline:nth-child(3)"));
+		WebElement userTitleMrs = driver.findElement(By.cssSelector("div.radio-inline:nth-child(4)"));
 		WebElement customerFirstNameField = driver.findElement(By.cssSelector("#customer_firstname"));
 		WebElement customerLastNameField = driver.findElement(By.cssSelector("#customer_lastname"));
 		WebElement customerEmailAddressField = driver.findElement(By.cssSelector("#email"));
@@ -56,8 +57,6 @@ public class UserUtils {
 		WebElement addressAliasField = driver.findElement(By.cssSelector("#alias"));
 		WebElement registerButton = driver.findElement(By.cssSelector("#submitAccount"));
 		
-		if (gender instanceof String) { if(gender == "Male") { userTitleMr.click(); } else if (gender == "Female") { userTitleMrs.click();} }
-		
 		customerFirstNameField.sendKeys(firstname);
 		customerLastNameField.sendKeys(lastname);
 		customerEmailAddressField.click();
@@ -65,10 +64,10 @@ public class UserUtils {
 		if (dobday instanceof String) { customerDOB_DayField.click(); customerDOB_DayMenu.selectByValue(dobday); }
 		if (dobmonth instanceof String) { customerDOB_MonthField.click(); customerDOB_MonthField.sendKeys(dobmonth);; }
 		if (dobyear instanceof String) { customerDOB_YearField.click(); customerDOB_YearMenu.selectByValue(dobyear); }
-		if (newsletter instanceof String) { if (newsletter == "Yes") { newsletterCheckbox.click(); } }
-		if (optin instanceof String) { if (optin == "Yes") { optInCheckbox.click(); } }
-		addressFirstNameField.sendKeys(firstname);
-		addressLastNameField.sendKeys(lastname);
+		if (newsletter instanceof String) { if (newsletter == "Yes") { newsletterCheckbox.click(); newsletterCheckbox.click(); } }
+		if (optin instanceof String) { if (optin == "Yes") { optInCheckbox.click(); optInCheckbox.click(); } }
+		addressFirstNameField.click();
+		addressLastNameField.click();
 		addressCompanyField.sendKeys(companyname);
 		addressAddress1Field.sendKeys(address1);
 		if (address2 instanceof String) { addressAddress2Field.sendKeys(address2); }
@@ -80,6 +79,16 @@ public class UserUtils {
 		addressHomePhoneField.sendKeys(homephone);
 		addressMobilePhoneField.sendKeys(mobilephone);
 		addressAliasField.clear(); addressAliasField.sendKeys(alias);
+		if (gender instanceof String) { 
+			if(gender == "Male") { 
+				//((JavascriptExecutor) driver).executeScript("arguments[0].checked = true;", userTitleMr); 
+			
+				userTitleMr.click(); } 
+			else if (gender == "Female") { 
+				//((JavascriptExecutor) driver).executeScript("arguments[0].checked = true", userTitleMrs);
+				userTitleMrs.click(); } 
+			}
+		
 		// registerButton.click();
 		
 	}

@@ -3,7 +3,7 @@
 <suite name="Suite">
   <parameter name="geckoPath" value="//home//bartek//Downloads//geckodriver-v0.26.0-linux64//geckodriver"/>
   <test thread-count="5" name="Test">
-    <parameter name="useremail" 	value="ajensen1@sarif.com"						/>
+    <parameter name="useremail" 	value="ajensen2@sarif.com"						/>
  	<parameter name="password" 		value="meganReed"							   	/>
  	<parameter name="address" 		value="http://automationpractice.com/index.php"	/>
  	<parameter name="firstname"		value="Adam"									/>
