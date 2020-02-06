@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <parameter name="useremail" 		value="ajensen1@sarif.com"						/>
+  <parameter name="password" 		value="meganReed"							   	/>
+  <parameter name="address" 		value="http://automationpractice.com/index.php"	/>
+  <parameter name="firstname" 		value="Adam"									/>
+  <parameter name="lastname" 		value="Jensen"									/>
+  <parameter name="dobday"	 		value="7"										/>
+  <parameter name="dobmonth" 		value="January"									/>
+  <parameter name="dobyear" 		value="1977"									/>
+  <parameter name="companyname" 	value="Sarif Industres"							/>
+  <parameter name="address1" 		value="Paper St. 1"								/>
+  <parameter name="address2" 		value="13"										/>
+  <parameter name="city"	 		value="Detroit"									/>
+  <parameter name="state" 			value="Michigan"								/>
+  <parameter name="zipcode" 		value="33333"									/>
+  <parameter name="countrye" 		value="United States"							/>
+  <parameter name="additional" 		value="I never asked for this"					/>
+  <parameter name="homephone" 		value="666666666"								/>
+  <parameter name="mobilephone" 	value="696969696"								/>
+  <parameter name="alias" 			value="DeusEx"									/>
+  <parameter name="gender" 			value="Male"									/>
+  <parameter name="newsletter" 		value="No"										/>
+  <parameter name="optin" 			value="No"										/>
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="org.gothos.aps.MainTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

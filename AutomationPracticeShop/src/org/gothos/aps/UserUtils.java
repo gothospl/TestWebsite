@@ -13,7 +13,7 @@ public class UserUtils {
 		throw new IllegalStateException("Utility class");
 	}
 	
-	static void addUser(WebDriver driver, String username, String password, String address, String[] customerData ) {
+	static void addUser(WebDriver driver, String useremail, String password, String address, String[] customerData ) {
 		
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		
@@ -25,7 +25,7 @@ public class UserUtils {
 		
 		WebElement emailCreateField = driver.findElement(By.cssSelector("#email_create"));
 		WebElement createAnAccountButton = driver.findElement(By.cssSelector("#SubmitCreate"));
-		emailCreateField.sendKeys(username);
+		emailCreateField.sendKeys(useremail);
 		createAnAccountButton.click();
 		
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#customer_firstname")));
@@ -64,7 +64,7 @@ public class UserUtils {
 		
 		customerFirstNameField.sendKeys(firstname);
 		customerLastNameField.sendKeys(lastname);
-		customerEmailAddressField.sendKeys(username);
+		customerEmailAddressField.sendKeys(useremail);
 		customerPasswordField.sendKeys(password);
 		customerDOB_DayMenu.selectByVisibleText(dobday);
 		customerDOB_MonthMenu.selectByVisibleText(dobmonth);

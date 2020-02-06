@@ -1,13 +1,13 @@
 package org.gothos.tds;
 
-import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Parameters;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 public class MainTest {
 	
