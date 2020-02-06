@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-02-06T16:07:46 CET" name="Suite" finished-at="2020-02-06T16:08:03 CET" duration-ms="17210">
+    <groups>
+    </groups>
+    <test started-at="2020-02-06T16:07:46 CET" name="Test" finished-at="2020-02-06T16:08:03 CET" duration-ms="17210">
+      <class name="org.gothos.aps.MainTest">
+        <test-method is-config="true" signature="beforeSuite(java.lang.String)[pri:0, instance:org.gothos.aps.MainTest@75f32542]" started-at="2020-02-06T16:07:46 CET" name="beforeSuite" finished-at="2020-02-06T16:07:46 CET" duration-ms="15" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[//home//bartek//Downloads//geckodriver-v0.26.0-linux64//geckodriver]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:org.gothos.aps.MainTest@75f32542]" started-at="2020-02-06T16:07:46 CET" name="beforeTest" finished-at="2020-02-06T16:07:46 CET" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="CreateUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:org.gothos.aps.MainTest@75f32542]" started-at="2020-02-06T16:07:46 CET" name="CreateUser" finished-at="2020-02-06T16:08:03 CET" duration-ms="17130" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ajensen1@sarif.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[meganReed]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://automationpractice.com/index.php]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Adam]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Jensen]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[17]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[January]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[1977]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Sarif Industres]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Paper St. 1]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[13]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[Detroit]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[Michigan]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[33333]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[United States]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[I never asked for this]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[666666666]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[696969696]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[DeusEx]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[Male]]>
+              </value>
+            </param>
+            <param index="20">
+              <value>
+                <![CDATA[Yes]]>
+              </value>
+            </param>
+            <param index="21">
+              <value>
+                <![CDATA[No]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateUser -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:org.gothos.aps.MainTest@75f32542]" started-at="2020-02-06T16:08:03 CET" name="afterTest" finished-at="2020-02-06T16:08:03 CET" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- org.gothos.aps.MainTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

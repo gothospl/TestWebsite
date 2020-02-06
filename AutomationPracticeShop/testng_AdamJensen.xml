@@ -8,7 +8,7 @@
  	<parameter name="address" 		value="http://automationpractice.com/index.php"	/>
  	<parameter name="firstname"		value="Adam"									/>
  	<parameter name="lastname" 		value="Jensen"									/>
-  	<parameter name="dobday"		value="7"										/>
+  	<parameter name="dobday"		value="17"										/>
   	<parameter name="dobmonth" 		value="January"									/>
   	<parameter name="dobyear" 		value="1977"									/>
   	<parameter name="companyname" 	value="Sarif Industres"							/>
@@ -23,7 +23,7 @@
   	<parameter name="mobilephone" 	value="696969696"								/>
   	<parameter name="alias" 		value="DeusEx"									/>
   	<parameter name="gender" 		value="Male"									/>
-  	<parameter name="newsletter" 	value="No"										/>
+  	<parameter name="newsletter" 	value="Yes"										/>
   	<parameter name="optin" 		value="No"										/>
     <classes>
       <class name="org.gothos.aps.MainTest"/>
