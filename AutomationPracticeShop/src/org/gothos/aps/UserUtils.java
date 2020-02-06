@@ -5,6 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.sun.org.apache.xpath.internal.operations.Bool;
+
 import org.openqa.selenium.support.ui.Select;
 
 public class UserUtils {
@@ -13,7 +16,7 @@ public class UserUtils {
 		throw new IllegalStateException("Utility class");
 	}
 	
-	static void addUser(WebDriver driver, String useremail, String password, String address, String[] customerData ) {
+	static void addUser(WebDriver driver, String useremail, String password, String address, String firstname, String lastname, String dobday, String dobmonth, String dobyear, String companyname, String address1, String address2, String city, String state, String zipcode, String country, String additional, String homephone, String mobilephone, String alias, boolean gender, boolean newsletter, boolean optin) {
 		
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		

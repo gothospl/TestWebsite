@@ -15,7 +15,7 @@
   <parameter name="city"	 		value="Detroit"									/>
   <parameter name="state" 			value="Michigan"								/>
   <parameter name="zipcode" 		value="33333"									/>
-  <parameter name="countrye" 		value="United States"							/>
+  <parameter name="country" 		value="United States"							/>
   <parameter name="additional" 		value="I never asked for this"					/>
   <parameter name="homephone" 		value="666666666"								/>
   <parameter name="mobilephone" 	value="696969696"								/>
