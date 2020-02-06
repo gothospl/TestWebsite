@@ -5,9 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import com.sun.org.apache.xpath.internal.operations.Bool;
-
 import org.openqa.selenium.support.ui.Select;
 
 public class UserUtils {
@@ -16,7 +13,7 @@ public class UserUtils {
 		throw new IllegalStateException("Utility class");
 	}
 	
-	static void addUser(WebDriver driver, String useremail, String password, String address, String firstname, String lastname, String dobday, String dobmonth, String dobyear, String companyname, String address1, String address2, String city, String state, String zipcode, String country, String additional, String homephone, String mobilephone, String alias, boolean gender, boolean newsletter, boolean optin) {
+	static void addUser(WebDriver driver, String useremail, String password, String address, String firstname, String lastname, String dobday, String dobmonth, String dobyear, String companyname, String address1, String address2, String city, String state, String zipcode, String country, String additional, String homephone, String mobilephone, String alias, String gender, String newsletter, String optin) {
 		
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		
@@ -59,33 +56,31 @@ public class UserUtils {
 		WebElement addressAliasField = driver.findElement(By.cssSelector("#alias"));
 		WebElement registerButton = driver.findElement(By.cssSelector("#submitAccount"));
 		
-		if(gender == "Male") {
-			userTitleMr.click();
-		} else {
-			userTitleMrs.click();
-		}
+		if (gender instanceof String) { if(gender == "Male") { userTitleMr.click(); } else if (gender == "Female") { userTitleMrs.click();} }
 		
 		customerFirstNameField.sendKeys(firstname);
 		customerLastNameField.sendKeys(lastname);
 		customerEmailAddressField.sendKeys(useremail);
 		customerPasswordField.sendKeys(password);
-		customerDOB_DayMenu.selectByVisibleText(dobday);
-		customerDOB_MonthMenu.selectByVisibleText(dobmonth);
-		customerDOB_YearMenu.selectByVisibleText(dobyear);
+		if (dobday instanceof String) { customerDOB_DayMenu.selectByVisibleText(dobday); }
+		if (dobmonth instanceof String) { customerDOB_MonthMenu.selectByVisibleText(dobmonth); }
+		if (dobyear instanceof String) { customerDOB_YearMenu.selectByVisibleText(dobyear); }
+		if (newsletter instanceof String) { if (newsletter == "Yes") { newsletterCheckbox.click(); } }
+		if (optin instanceof String) { if (optin == "Yes") { optInCheckbox.click(); } }
 		addressFirstNameField.sendKeys(firstname);
 		addressLastNameField.sendKeys(lastname);
 		addressCompanyField.sendKeys(companyname);
 		addressAddress1Field.sendKeys(address1);
-		addressAddress2Field.sendKeys(address2);
+		if (address2 instanceof String) { addressAddress2Field.sendKeys(address2); }
 		addressCityField.sendKeys(city);
 		addressStateMenu.selectByVisibleText(state);
 		addressZipCodeField.sendKeys(zipcode);
 		addressCountryMenu.deselectByVisibleText(country);
-		addressAdditionalField.sendKeys(additional);
+		if (additional instanceof String) { addressAdditionalField.sendKeys(additional); }
 		addressHomePhoneField.sendKeys(homephone);
 		addressMobilePhoneField.sendKeys(mobilephone);
 		addressAliasField.sendKeys(alias);
-		registerButton.click();
+		// registerButton.click();
 		
 	}
 

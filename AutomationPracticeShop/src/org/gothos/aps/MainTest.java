@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeSuite;
 
 public class MainTest {
 	
@@ -17,11 +18,19 @@ public class MainTest {
   
   @Parameters ({ "useremail", "password", "address", "firstname", "lastname", "dobday", "dobmonth", "dobyear", "companyname", "address1", "address2", "city", "state", "zipcode", "country", "additional", "homephone", "mobilephone", "alias", "gender", "newsletter", "optin" })
   @Test
-  public void CreateUser(String useremail, String password, String address, String firstname, String lastname, @Optional String dobday, @Optional String dobmonth, @Optional String dobyear, @Optional String companyname, String address1, @Optional String address2, String city, String state, String zipcode, String country, @Optional String additional, String homephone, String mobilephone, String alias, @Optional boolean gender, @Optional boolean newsletter, @Optional boolean optin) {
+  public void CreateUser(String useremail, String password, String address, String firstname, String lastname, @Optional String dobday, @Optional String dobmonth, @Optional String dobyear, @Optional String companyname, String address1, @Optional String address2, String city, String state, String zipcode, String country, @Optional String additional, String homephone, String mobilephone, String alias, @Optional String gender, @Optional String newsletter, @Optional String optin) {
 	  
 	  WebDriver driver = new FirefoxDriver(options);
 	  UserUtils.addUser(driver, useremail, password, address, firstname, lastname, dobday, dobmonth, dobyear, companyname, address1, address2, city, state, zipcode, country, additional, homephone, mobilephone, alias, gender, newsletter, optin);
 	  
+  }
+  
+  @Parameters ({ "geckoPath" })
+  @BeforeSuite
+  public void beforeSuite(String geckoPath) {
+	  options.setCapability("marionette", true);
+	  options.addPreference("browser.link.open_newwindow", 1);
+	  System.setProperty("webdriver.gecko.driver", geckoPath);
   }
   
   @BeforeTest
