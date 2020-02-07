@@ -24,12 +24,12 @@
     <parameter name="mobilephone" value="696969696"/>
     <parameter name="alias" value="DeusEx"/>
     <parameter name="state" value="Michigan"/>
-    <parameter name="useremail" value="ajensen1@sarif.com"/>
+    <parameter name="useremail" value="ajensen@sarif.com"/>
     <classes>
       <class name="org.gothos.aps.MainTest">
         <methods>
           <include name="afterTest"/>
-          <include name="CreateUser" invocation-numbers="0"/>
+          <include name="SignInUser" invocation-numbers="0"/>
           <include name="beforeTest"/>
           <include name="beforeSuite"/>
         </methods>

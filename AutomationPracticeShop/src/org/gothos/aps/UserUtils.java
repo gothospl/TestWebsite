@@ -1,9 +1,9 @@
 package org.gothos.aps;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.Select;
@@ -38,7 +38,7 @@ public class UserUtils {
 		WebElement customerEmailAddressField = driver.findElement(By.cssSelector("#email"));
 		WebElement customerPasswordField = driver.findElement(By.cssSelector("#passwd"));
 		WebElement customerDOB_DayField = driver.findElement(By.cssSelector("#days")); Select customerDOB_DayMenu = new Select (customerDOB_DayField);
-		WebElement customerDOB_MonthField = driver.findElement(By.cssSelector("#months")); Select customerDOB_MonthMenu = new Select (customerDOB_MonthField);
+		WebElement customerDOB_MonthField = driver.findElement(By.cssSelector("#months")); 
 		WebElement customerDOB_YearField = driver.findElement(By.cssSelector("#years")); Select customerDOB_YearMenu = new Select (customerDOB_YearField);
 		WebElement newsletterCheckbox = driver.findElement(By.cssSelector("#newsletter"));
 		WebElement optInCheckbox = driver.findElement(By.cssSelector("#optin"));		
@@ -56,7 +56,19 @@ public class UserUtils {
 		WebElement addressMobilePhoneField = driver.findElement(By.cssSelector("#phone_mobile"));
 		WebElement addressAliasField = driver.findElement(By.cssSelector("#alias"));
 		WebElement registerButton = driver.findElement(By.cssSelector("#submitAccount"));
+		Actions action = new Actions(driver);
 		
+		action.moveToElement(userTitleMr);
+		wait.until(ExpectedConditions.elementToBeClickable(userTitleMr));
+		
+		if (gender instanceof String) { 
+			if(gender.equals("Male")) {
+				action.moveToElement(userTitleMr);
+				userTitleMr.click(); userTitleMr.click(); } 
+			else if (gender.equals("Female")) {
+				action.moveToElement(userTitleMrs);
+				userTitleMrs.click(); userTitleMrs.click(); } 
+		}
 		customerFirstNameField.sendKeys(firstname);
 		customerLastNameField.sendKeys(lastname);
 		customerEmailAddressField.click();
@@ -64,8 +76,8 @@ public class UserUtils {
 		if (dobday instanceof String) { customerDOB_DayField.click(); customerDOB_DayMenu.selectByValue(dobday); }
 		if (dobmonth instanceof String) { customerDOB_MonthField.click(); customerDOB_MonthField.sendKeys(dobmonth);; }
 		if (dobyear instanceof String) { customerDOB_YearField.click(); customerDOB_YearMenu.selectByValue(dobyear); }
-		if (newsletter instanceof String) { if (newsletter == "Yes") { newsletterCheckbox.click(); newsletterCheckbox.click(); } }
-		if (optin instanceof String) { if (optin == "Yes") { optInCheckbox.click(); optInCheckbox.click(); } }
+		if (newsletter instanceof String) { if (newsletter.equals("Yes")) { newsletterCheckbox.click(); } }
+		if (optin instanceof String) { if (optin.equals("Yes")) { optInCheckbox.click(); } }
 		addressFirstNameField.click();
 		addressLastNameField.click();
 		addressCompanyField.sendKeys(companyname);
@@ -79,18 +91,21 @@ public class UserUtils {
 		addressHomePhoneField.sendKeys(homephone);
 		addressMobilePhoneField.sendKeys(mobilephone);
 		addressAliasField.clear(); addressAliasField.sendKeys(alias);
-		if (gender instanceof String) { 
-			if(gender == "Male") { 
-				//((JavascriptExecutor) driver).executeScript("arguments[0].checked = true;", userTitleMr); 
-			
-				userTitleMr.click(); } 
-			else if (gender == "Female") { 
-				//((JavascriptExecutor) driver).executeScript("arguments[0].checked = true", userTitleMrs);
-				userTitleMrs.click(); } 
-			}
 		
-		// registerButton.click();
+		
+		registerButton.click();
 		
 	}
-
+	
+	static void signInUser(WebDriver driver, String useremail, String password, String address) {
+		
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		
+		driver.navigate().to(address);
+		WebElement logInLink = driver.findElement(By.cssSelector(".login"));
+		logInLink.click();
+		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#email_create")));		
+		
+	}
 }
