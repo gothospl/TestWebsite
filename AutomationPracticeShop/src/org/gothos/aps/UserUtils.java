@@ -91,8 +91,6 @@ public class UserUtils {
 		addressHomePhoneField.sendKeys(homephone);
 		addressMobilePhoneField.sendKeys(mobilephone);
 		addressAliasField.clear(); addressAliasField.sendKeys(alias);
-		
-		
 		registerButton.click();
 		
 	}
@@ -123,4 +121,5 @@ public class UserUtils {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#email_create")));
 		driver.close();
 	}
+	
 }

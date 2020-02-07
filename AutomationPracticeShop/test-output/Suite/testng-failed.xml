@@ -16,6 +16,7 @@
     <parameter name="additional" value="I never asked for this"/>
     <parameter name="optin" value="No"/>
     <parameter name="dobday" value="17"/>
+    <parameter name="expMsg" value="Welcome to your account"/>
     <parameter name="lastname" value="Jensen"/>
     <parameter name="zipcode" value="33333"/>
     <parameter name="dobmonth" value="January"/>
@@ -24,12 +25,12 @@
     <parameter name="mobilephone" value="696969696"/>
     <parameter name="alias" value="DeusEx"/>
     <parameter name="state" value="Michigan"/>
-    <parameter name="useremail" value="ajensen@sarif.com"/>
+    <parameter name="useremail" value="ajensen1@sarif.com"/>
     <classes>
       <class name="org.gothos.aps.MainTest">
         <methods>
           <include name="afterTest"/>
-          <include name="SignInUser" invocation-numbers="0"/>
+          <include name="ListAllElements" invocation-numbers="0"/>
           <include name="beforeTest"/>
           <include name="beforeSuite"/>
         </methods>

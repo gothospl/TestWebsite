@@ -5,8 +5,12 @@ import org.testng.asserts.SoftAssert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
+
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterTest;
@@ -16,7 +20,7 @@ public class MainTest {
 	
 	public static final FirefoxOptions options = new FirefoxOptions(); 
 	public static final SoftAssert sa = new SoftAssert();
-  
+	  
   @Parameters ({ "useremail", "password", "address", "firstname", "lastname", "dobday", "dobmonth", "dobyear", "companyname", "address1", "address2", "city", "state", "zipcode", "country", "additional", "homephone", "mobilephone", "alias", "gender", "newsletter", "optin", "expMsg" })
   @Test(enabled=false)
   public void CreateUser(String useremail, String password, String address, String firstname, String lastname, @Optional String dobday, @Optional String dobmonth, @Optional String dobyear, @Optional String companyname, String address1, @Optional String address2, String city, String state, String zipcode, String country, @Optional String additional, String homephone, String mobilephone, String alias, @Optional String gender, @Optional String newsletter, @Optional String optin, String expMsg) {  
@@ -27,15 +31,34 @@ public class MainTest {
   }
   
   @Parameters ({ "useremail", "password", "address", "expMsg" })
-  @Test(enabled=true)
+  @Test(enabled=false)
   public void SignIn(String useremail, String password, String address, String expMsg) {
 	  WebDriver driver = new FirefoxDriver(options);
 	  UserUtils.signIn(driver, useremail, password, address);
 	  String bodyText = driver.findElement(By.tagName("body")).getText();
 	  sa.assertTrue(bodyText.contains(expMsg), "User account creation successful!");
-	  UserUtils.signOut(driver);
   }
-   
+
+  @Parameters({ "useremail", "password", "address", "expMsg" })
+  @Test(enabled=false)
+  public void VerifyAccountTabs(String useremail, String password, String address, String expMsg) {
+	  WebDriver driver = new FirefoxDriver(options);
+	  UserUtils.signIn(driver, useremail, password, address);
+	  String bodyText = driver.findElement(By.tagName("body")).getText();
+	  sa.assertTrue(bodyText.contains(expMsg), "User account creation successful!");
+	  VerifyObjects.accountTabs(driver);
+  }
+  
+  @Parameters({ "address", "useremail", "password" })
+  @Test
+  public void ListAllElements(String address, String useremail, String password) {
+	  WebDriver driver = new FirefoxDriver(options);
+	  UserUtils.signIn(driver, useremail, password, address);
+	  VerifyObjects.elementList(driver);
+	  driver.quit();
+  }
+  
+  
   @Parameters ({ "geckoPath" })
   @BeforeSuite
   public void beforeSuite(String geckoPath) {

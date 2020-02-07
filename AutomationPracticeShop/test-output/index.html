@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="org.gothos.aps.MainTest" class="method navigator-link" hash-for-method="SignIn(ajensen1@sarif.com, meganReed, http://automationpractice.com/index.php, Welcome to your account)">SignIn(ajensen1@sarif.com, meganReed, http://automationpractice.com/index.php, Welcome to your account)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="org.gothos.aps.MainTest" class="method navigator-link" hash-for-method="ListAllElements(http://automationpractice.com/index.php, ajensen1@sarif.com, meganReed)">ListAllElements(http://automationpractice.com/index.php, ajensen1@sarif.com, meganReed)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -125,10 +125,10 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="SignIn(ajensen1@sarif.com, meganReed, http://automationpractice.com/index.php, Welcome to your account)">
-                  </a> <!-- SignIn(ajensen1@sarif.com, meganReed, http://automationpractice.com/index.php, Welcome to your account) -->
-                  <span class="method-name">SignIn</span>
-                  <span class="parameters">(ajensen1@sarif.com, meganReed, http://automationpractice.com/index.php, Welcome to your account)</span>
+                  <a name="ListAllElements(http://automationpractice.com/index.php, ajensen1@sarif.com, meganReed)">
+                  </a> <!-- ListAllElements(http://automationpractice.com/index.php, ajensen1@sarif.com, meganReed) -->
+                  <span class="method-name">ListAllElements</span>
+                  <span class="parameters">(http://automationpractice.com/index.php, ajensen1@sarif.com, meganReed)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -211,14 +211,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'SignIn')
+data.setCell(0, 1, 'ListAllElements')
 data.setCell(0, 2, 'org.gothos.aps.MainTest')
-data.setCell(0, 3, 28082);
+data.setCell(0, 3, 16406);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 28 seconds</span>
+              <span class="suite-total-time">Total running time: 16 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -233,15 +233,17 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">org.gothos.aps.MainTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">GoddamnRadios</span>
-                <br/>
                 <span class="ignored-method-name">CreateUser</span>
+                <br/>
+                <span class="ignored-method-name">VerifyAccountTabs</span>
+                <br/>
+                <span class="ignored-method-name">SignIn</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -260,12 +262,16 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">41 ms</span>
+                <span class="method-start">26 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">SignIn(ajensen1@sarif.com, meganReed, http://automationpractice.com/index.php, Welcome to your account)</span>
-                <span class="method-start">90 ms</span>
+                <span class="method-name">ListAllElements(http://automationpractice.com/index.php, ajensen1@sarif.com, meganReed)</span>
+                <span class="method-start">73 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">afterTest</span>
+                <span class="method-start">16492 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
