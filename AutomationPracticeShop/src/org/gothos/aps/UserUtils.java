@@ -105,7 +105,15 @@ public class UserUtils {
 		WebElement logInLink = driver.findElement(By.cssSelector(".login"));
 		logInLink.click();
 		
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#email_create")));		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#email")));		
+		
+		WebElement useremailField = driver.findElement(By.cssSelector("#email"));
+		WebElement passwordField = driver.findElement(By.cssSelector("#passwd"));
+		WebElement signInButton = driver.findElement(By.cssSelector("#SubmitLogin"));
+		
+		useremailField.sendKeys(useremail);
+		passwordField.sendKeys(password);
+		signInButton.click();
 		
 	}
 }

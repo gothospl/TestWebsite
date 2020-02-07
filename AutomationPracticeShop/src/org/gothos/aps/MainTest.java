@@ -30,8 +30,8 @@ public class MainTest {
   public void SignInUser(String useremail, String password, String address) {
 	  WebDriver driver = new FirefoxDriver(options);
 	  UserUtils.signInUser(driver, useremail, password, address);
-	  driver.close();
-	  driver.quit();
+//	  driver.close();
+//	  driver.quit();
   }
   
   @Parameters ({ "gender" })

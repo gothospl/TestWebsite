@@ -2,12 +2,12 @@
 <testng-results ignored="2" total="3" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-02-07T14:28:23 CET" name="Suite" finished-at="2020-02-07T14:28:35 CET" duration-ms="11977">
+  <suite started-at="2020-02-07T14:46:41 CET" name="Suite" finished-at="2020-02-07T14:46:54 CET" duration-ms="13467">
     <groups>
     </groups>
-    <test started-at="2020-02-07T14:28:23 CET" name="Test" finished-at="2020-02-07T14:28:35 CET" duration-ms="11977">
+    <test started-at="2020-02-07T14:46:41 CET" name="Test" finished-at="2020-02-07T14:46:54 CET" duration-ms="13467">
       <class name="org.gothos.aps.MainTest">
-        <test-method is-config="true" signature="beforeSuite(java.lang.String)[pri:0, instance:org.gothos.aps.MainTest@43ee72e6]" started-at="2020-02-07T14:28:23 CET" name="beforeSuite" finished-at="2020-02-07T14:28:23 CET" duration-ms="13" status="PASS">
+        <test-method is-config="true" signature="beforeSuite(java.lang.String)[pri:0, instance:org.gothos.aps.MainTest@43ee72e6]" started-at="2020-02-07T14:46:40 CET" name="beforeSuite" finished-at="2020-02-07T14:46:41 CET" duration-ms="21" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,11 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:org.gothos.aps.MainTest@43ee72e6]" started-at="2020-02-07T14:28:23 CET" name="beforeTest" finished-at="2020-02-07T14:28:23 CET" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:org.gothos.aps.MainTest@43ee72e6]" started-at="2020-02-07T14:46:41 CET" name="beforeTest" finished-at="2020-02-07T14:46:41 CET" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="SignInUser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:org.gothos.aps.MainTest@43ee72e6]" started-at="2020-02-07T14:28:23 CET" name="SignInUser" finished-at="2020-02-07T14:28:35 CET" duration-ms="11893" status="FAIL">
+        <test-method signature="SignInUser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:org.gothos.aps.MainTest@43ee72e6]" started-at="2020-02-07T14:46:41 CET" name="SignInUser" finished-at="2020-02-07T14:46:54 CET" duration-ms="13349" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -46,16 +46,16 @@
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
 System info: host: 'bartek1-VirtualBox', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.3.0-28-generic', java.version: '11.0.6'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 72.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200117190643, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 9984, moz:profile: /tmp/rust_mozprofileBZqo30, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 5.3.0-28-generic, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 252a1a40-5538-4559-9c24-4f0b71bfd7b0]]>
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 72.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200117190643, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 10391, moz:profile: /tmp/rust_mozprofile73rI1w, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 5.3.0-28-generic, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: f2a87067-82db-464c-b72d-31d17c79263f]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
 System info: host: 'bartek1-VirtualBox', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.3.0-28-generic', java.version: '11.0.6'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 72.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200117190643, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 9984, moz:profile: /tmp/rust_mozprofileBZqo30, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 5.3.0-28-generic, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 252a1a40-5538-4559-9c24-4f0b71bfd7b0
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 72.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200117190643, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 10391, moz:profile: /tmp/rust_mozprofile73rI1w, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 5.3.0-28-generic, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: f2a87067-82db-464c-b72d-31d17c79263f
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -103,7 +103,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SignInUser -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:org.gothos.aps.MainTest@43ee72e6]" started-at="2020-02-07T14:28:35 CET" name="afterTest" finished-at="2020-02-07T14:28:35 CET" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:org.gothos.aps.MainTest@43ee72e6]" started-at="2020-02-07T14:46:54 CET" name="afterTest" finished-at="2020-02-07T14:46:54 CET" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
