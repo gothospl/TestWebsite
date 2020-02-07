@@ -14,7 +14,7 @@ public class UserUtils {
 		throw new IllegalStateException("Utility class");
 	}
 	
-	static void addUser(WebDriver driver, String useremail, String password, String address, String firstname, String lastname, String dobday, String dobmonth, String dobyear, String companyname, String address1, String address2, String city, String state, String zipcode, String country, String additional, String homephone, String mobilephone, String alias, String gender, String newsletter, String optin) {
+	static void addUser(WebDriver driver, String useremail, String password, String address, String firstname, String lastname, String dobday, String dobmonth, String dobyear, String companyname, String address1, String address2, String city, String state, String zipcode, String country, String additional, String homephone, String mobilephone, String alias, String gender, String newsletter, String optin, String expMsg) {
 		
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		
@@ -97,7 +97,7 @@ public class UserUtils {
 		
 	}
 	
-	static void signInUser(WebDriver driver, String useremail, String password, String address) {
+	static void signIn(WebDriver driver, String useremail, String password, String address) {
 		
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		
@@ -105,7 +105,22 @@ public class UserUtils {
 		WebElement logInLink = driver.findElement(By.cssSelector(".login"));
 		logInLink.click();
 		
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#email_create")));		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#email")));		
 		
+		WebElement useremailField = driver.findElement(By.cssSelector("#email"));
+		WebElement passwordField = driver.findElement(By.cssSelector("#passwd"));
+		WebElement signInButton = driver.findElement(By.cssSelector("#SubmitLogin"));
+		
+		useremailField.sendKeys(useremail);
+		passwordField.sendKeys(password);
+		signInButton.click();
+		
+	}
+
+	static void signOut(WebDriver driver) {	
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		driver.findElement(By.cssSelector(".logout")).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#email_create")));
+		driver.close();
 	}
 }

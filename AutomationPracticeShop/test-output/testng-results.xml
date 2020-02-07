@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="0" failed="1" skipped="0">
+<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-02-07T14:28:23 CET" name="Suite" finished-at="2020-02-07T14:28:35 CET" duration-ms="11977">
+  <suite started-at="2020-02-07T15:08:49 CET" name="Suite" finished-at="2020-02-07T15:09:17 CET" duration-ms="28173">
     <groups>
     </groups>
-    <test started-at="2020-02-07T14:28:23 CET" name="Test" finished-at="2020-02-07T14:28:35 CET" duration-ms="11977">
+    <test started-at="2020-02-07T15:08:49 CET" name="Test" finished-at="2020-02-07T15:09:17 CET" duration-ms="28173">
       <class name="org.gothos.aps.MainTest">
-        <test-method is-config="true" signature="beforeSuite(java.lang.String)[pri:0, instance:org.gothos.aps.MainTest@43ee72e6]" started-at="2020-02-07T14:28:23 CET" name="beforeSuite" finished-at="2020-02-07T14:28:23 CET" duration-ms="13" status="PASS">
+        <test-method is-config="true" signature="beforeSuite(java.lang.String)[pri:0, instance:org.gothos.aps.MainTest@23529fee]" started-at="2020-02-07T15:08:49 CET" name="beforeSuite" finished-at="2020-02-07T15:08:49 CET" duration-ms="29" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:org.gothos.aps.MainTest@43ee72e6]" started-at="2020-02-07T14:28:23 CET" name="beforeTest" finished-at="2020-02-07T14:28:23 CET" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:org.gothos.aps.MainTest@23529fee]" started-at="2020-02-07T15:08:49 CET" name="beforeTest" finished-at="2020-02-07T15:08:49 CET" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="SignInUser(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:org.gothos.aps.MainTest@43ee72e6]" started-at="2020-02-07T14:28:23 CET" name="SignInUser" finished-at="2020-02-07T14:28:35 CET" duration-ms="11893" status="FAIL">
+        <test-method signature="SignIn(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:org.gothos.aps.MainTest@23529fee]" started-at="2020-02-07T15:08:49 CET" name="SignIn" finished-at="2020-02-07T15:09:17 CET" duration-ms="28082" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ajensen@sarif.com]]>
+                <![CDATA[ajensen1@sarif.com]]>
               </value>
             </param>
             <param index="1">
@@ -39,51 +39,34 @@
                 <![CDATA[http://automationpractice.com/index.php]]>
               </value>
             </param>
+            <param index="3">
+              <value>
+                <![CDATA[Welcome to your account]]>
+              </value>
+            </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchSessionException">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SignIn -->
+        <test-method is-config="true" signature="afterTest(org.openqa.selenium.WebDriver)[pri:0, instance:org.gothos.aps.MainTest@23529fee]" started-at="2020-02-07T15:09:17 CET" name="afterTest" finished-at="1970-01-01T01:00:00 CET" duration-ms="-1581084557440" status="FAIL">
+          <exception class="org.testng.TestNGException">
             <message>
-              <![CDATA[Tried to run command without establishing a connection
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
-System info: host: 'bartek1-VirtualBox', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.3.0-28-generic', java.version: '11.0.6'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 72.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200117190643, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 9984, moz:profile: /tmp/rust_mozprofileBZqo30, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 5.3.0-28-generic, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 252a1a40-5538-4559-9c24-4f0b71bfd7b0]]>
+              <![CDATA[
+Can inject only one of <ITestContext, XmlTest> into a @AfterTest annotated afterTest.
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
-System info: host: 'bartek1-VirtualBox', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.3.0-28-generic', java.version: '11.0.6'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 72.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200117190643, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 9984, moz:profile: /tmp/rust_mozprofileBZqo30, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 5.3.0-28-generic, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 252a1a40-5538-4559-9c24-4f0b71bfd7b0
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:452)
-at org.gothos.aps.MainTest.SignInUser(MainTest.java:34)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-at org.testng.TestRunner.privateRun(TestRunner.java:770)
-at org.testng.TestRunner.run(TestRunner.java:591)
+              <![CDATA[org.testng.TestNGException: 
+Can inject only one of <ITestContext, XmlTest> into a @AfterTest annotated afterTest.
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
+at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:458)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:372)
+at org.testng.internal.Parameters.createParameters(Parameters.java:729)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:164)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:275)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:623)
+at org.testng.TestRunner.afterRun(TestRunner.java:853)
+at org.testng.TestRunner.run(TestRunner.java:594)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
 at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
 at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
@@ -99,11 +82,7 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SignInUser -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:org.gothos.aps.MainTest@43ee72e6]" started-at="2020-02-07T14:28:35 CET" name="afterTest" finished-at="2020-02-07T14:28:35 CET" duration-ms="1" status="PASS">
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->

@@ -5,6 +5,7 @@ import org.testng.asserts.SoftAssert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
@@ -16,22 +17,23 @@ public class MainTest {
 	public static final FirefoxOptions options = new FirefoxOptions(); 
 	public static final SoftAssert sa = new SoftAssert();
   
-  @Parameters ({ "useremail", "password", "address", "firstname", "lastname", "dobday", "dobmonth", "dobyear", "companyname", "address1", "address2", "city", "state", "zipcode", "country", "additional", "homephone", "mobilephone", "alias", "gender", "newsletter", "optin" })
+  @Parameters ({ "useremail", "password", "address", "firstname", "lastname", "dobday", "dobmonth", "dobyear", "companyname", "address1", "address2", "city", "state", "zipcode", "country", "additional", "homephone", "mobilephone", "alias", "gender", "newsletter", "optin", "expMsg" })
   @Test(enabled=false)
-  public void CreateUser(String useremail, String password, String address, String firstname, String lastname, @Optional String dobday, @Optional String dobmonth, @Optional String dobyear, @Optional String companyname, String address1, @Optional String address2, String city, String state, String zipcode, String country, @Optional String additional, String homephone, String mobilephone, String alias, @Optional String gender, @Optional String newsletter, @Optional String optin) {  
+  public void CreateUser(String useremail, String password, String address, String firstname, String lastname, @Optional String dobday, @Optional String dobmonth, @Optional String dobyear, @Optional String companyname, String address1, @Optional String address2, String city, String state, String zipcode, String country, @Optional String additional, String homephone, String mobilephone, String alias, @Optional String gender, @Optional String newsletter, @Optional String optin, String expMsg) {  
 	  WebDriver driver = new FirefoxDriver(options);
-	  UserUtils.addUser(driver, useremail, password, address, firstname, lastname, dobday, dobmonth, dobyear, companyname, address1, address2, city, state, zipcode, country, additional, homephone, mobilephone, alias, gender, newsletter, optin);
-	  driver.close();
-	  driver.quit();	  
+	  UserUtils.addUser(driver, useremail, password, address, firstname, lastname, dobday, dobmonth, dobyear, companyname, address1, address2, city, state, zipcode, country, additional, homephone, mobilephone, alias, gender, newsletter, optin, expMsg);
+	  String bodyText = driver.findElement(By.tagName("body")).getText();
+	  sa.assertTrue(bodyText.contains(expMsg), "User account creation successful!");  
   }
   
-  @Parameters ({ "useremail", "password", "address" })
+  @Parameters ({ "useremail", "password", "address", "expMsg" })
   @Test(enabled=true)
-  public void SignInUser(String useremail, String password, String address) {
+  public void SignIn(String useremail, String password, String address, String expMsg) {
 	  WebDriver driver = new FirefoxDriver(options);
-	  UserUtils.signInUser(driver, useremail, password, address);
-	  driver.close();
-	  driver.quit();
+	  UserUtils.signIn(driver, useremail, password, address);
+	  String bodyText = driver.findElement(By.tagName("body")).getText();
+	  sa.assertTrue(bodyText.contains(expMsg), "User account creation successful!");
+	  UserUtils.signOut(driver);
   }
   
   @Parameters ({ "gender" })
