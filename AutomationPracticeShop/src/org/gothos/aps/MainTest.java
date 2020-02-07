@@ -35,14 +35,7 @@ public class MainTest {
 	  sa.assertTrue(bodyText.contains(expMsg), "User account creation successful!");
 	  UserUtils.signOut(driver);
   }
-  
-  @Parameters ({ "gender" })
-  @Test(enabled=false)
-  public void GoddamnRadios(String gender) {
-	  WebDriver driver = new FirefoxDriver(options);
-	  GoddamnRadios.go(driver, gender);
-  }
-  
+   
   @Parameters ({ "geckoPath" })
   @BeforeSuite
   public void beforeSuite(String geckoPath) {
